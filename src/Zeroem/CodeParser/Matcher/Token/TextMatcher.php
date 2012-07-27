@@ -1,6 +1,7 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher;
+namespace Zeroem\CodeParser\Matcher\Token;
+use Zeroem\CodeParser\Matcher\MatcherInterface;
 
 class TextMatcher implements MatcherInterface
 {
