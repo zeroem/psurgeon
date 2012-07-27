@@ -1,6 +1,6 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher;
+namespace Zeroem\CodeParser\Matcher\Logic;
 
 class AndMatcher extends BooleanMatcher
 {

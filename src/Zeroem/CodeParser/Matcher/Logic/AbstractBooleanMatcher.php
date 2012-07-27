@@ -1,8 +1,10 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher;
+namespace Zeroem\CodeParser\Matcher\Logic;
 
-abstract class BooleanMatcher implements MatcherInterface
+use Zeroem\CodeParser\Matcher\MatcherInterface;
+
+abstract class AbstractBooleanMatcher implements MatcherInterface
 {
     protected $matchers = array();
 

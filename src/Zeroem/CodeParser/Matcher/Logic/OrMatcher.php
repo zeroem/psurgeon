@@ -1,8 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher;
+namespace Zeroem\CodeParser\Matcher\Logic;
 
-class OrMatcher extends BooleanMatcher
+class OrMatcher extends AbstractBooleanMatcher
 {
     public function match($mixed) {
         foreach($this->matchers as $matcher) {

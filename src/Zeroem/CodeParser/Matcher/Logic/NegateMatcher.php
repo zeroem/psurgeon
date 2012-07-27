@@ -1,6 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher;
+namespace Zeroem\CodeParser\Matcher\Logic;
+
+use Zeroem\CodeParser\Matcher\MatcherInterface;
 
 class NegateMatcher implements MatcherInterface 
 {
