@@ -11,6 +11,9 @@
 
     },
     "autoload": {
-        "psr-0": { "Zeroem\\CodeParser": "src" }
+        "psr-0": { 
+            "Zeroem\\CodeParser": "src",
+            "Zeroem\\CodeParser\\Test": "test"
+        }
     }
 }
