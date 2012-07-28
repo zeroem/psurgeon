@@ -18,5 +18,13 @@ class TokenMatcher implements MatcherInterface
 
        return false;
     }
+
+    public function getToken() {
+        return $this->token;
+    }
+
+    public function getTokenName() {
+        return token_name($this->token);
+    }
 }
 
