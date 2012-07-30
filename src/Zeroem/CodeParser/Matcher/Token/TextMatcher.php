@@ -2,6 +2,8 @@
 
 namespace Zeroem\CodeParser\Matcher\Token;
 use Zeroem\CodeParser\Matcher\MatcherInterface;
+use Zeroem\CodeParser\Token;
+
 
 class TextMatcher implements MatcherInterface
 {
@@ -14,22 +16,15 @@ class TextMatcher implements MatcherInterface
         if($this->ignoreCase) {
             $this->text = strtolower($text);
         } else {
-
             $this->text = $text;
         }
     }
 
-    public function match($mixed) {
-        if(is_array($mixed)) {
-            return $this->stringMatch($mixed[1]);
-        } else {
-            return $this->stringMatch($mixed);
-        }
-    }
-
-    private function stringMatch($str) {
+   private function match(Token $token) {
         if($this->ignoreCase) {
-            $str = strtolower($str);
+            $str = strtolower($token->getText());
+        } else {
+            $str = $token->getText();
         }
 
         return $str === $this->text;

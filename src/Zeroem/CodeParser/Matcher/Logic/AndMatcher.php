@@ -2,11 +2,13 @@
 
 namespace Zeroem\CodeParser\Matcher\Logic;
 
+use Zeroem\CodeParser\Token;
+
 class AndMatcher extends BooleanMatcher
 {
-    public function match($mixed) {
+    public function match(Token $token) {
         foreach($this->matchers as $matcher) {
-            if(!$matcher->match($mixed)) {
+            if(!$matcher->match($token)) {
                 return false;
             }
         }

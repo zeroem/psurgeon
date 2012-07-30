@@ -2,6 +2,7 @@
 
 namespace Zeroem\CodeParser\Matcher\Token;
 use Zeroem\CodeParser\Matcher\MatcherInterface;
+use Zeroem\CodeParser\Token;
 
 class TokenMatcher implements MatcherInterface
 {
@@ -11,12 +12,8 @@ class TokenMatcher implements MatcherInterface
         $this->token = token;
     }
 
-    public function match($mixed) {
-       if(is_array($mixed) && $mixed[0] == $this->token) {
-            return true;
-       }
-
-       return false;
+    public function match(Token $token) {
+        return $token->getType() == $this->token;
     }
 
     public function getToken() {

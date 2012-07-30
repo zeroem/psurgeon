@@ -3,6 +3,8 @@
 namespace Zeroem\CodeParser\Matcher\Logic;
 
 use Zeroem\CodeParser\Matcher\MatcherInterface;
+use Zeroem\CodeParser\Token;
+
 
 class NegateMatcher implements MatcherInterface 
 {
@@ -12,8 +14,8 @@ class NegateMatcher implements MatcherInterface
         $this->matcher = $matcher;
     }
 
-    public function match($mixed) {
-        return !$this->matcher->match($mixed);
+    public function match(Token $token) {
+        return !$this->matcher->match($token);
     }
 }
 

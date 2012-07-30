@@ -3,12 +3,13 @@
 namespace Zeroem\CodeParser\Matcher\Logic;
 
 use Zeroem\CodeParser\Matcher\MatcherInterface;
+use Zeroem\CodeParser\Token;
 
 abstract class AbstractBooleanMatcher implements MatcherInterface
 {
     protected $matchers = array();
 
-    public function __construct($matcher) {
+    public function __construct(MatcherInterface $matcher) {
         if($matcher instanceof \Zeroem\CodeParser\MatcherInterface) {
             $args = func_get_args();
         } else {
@@ -26,5 +27,5 @@ abstract class AbstractBooleanMatcher implements MatcherInterface
         }
     }
 
-    abstract function match($mixed);
+    abstract function match(Token $token);
 }

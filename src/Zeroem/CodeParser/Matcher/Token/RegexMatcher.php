@@ -2,6 +2,7 @@
 
 namespace Zeroem\CodeParser\Matcher\Token;
 use Zeroem\CodeParser\Matcher\MatcherInterface;
+user Zeroem\CodeParser\Token;
 
 class RegexMatcher implements MatcherInterface
 {
@@ -11,16 +12,8 @@ class RegexMatcher implements MatcherInterface
         $this->regex = $regex;
     }
 
-    public function match($mixed) {
-        if(is_array($mixed)) {
-            return $this->regexMatch($mixed[1]);
-        } else {
-            return $this->regexMatch($mixed);
-        }
-    }
-
-    private function regexMatch($mixed) {
-        return preg_match($this->regex,$mixed) > 0;
+    public function match(Token $token) {
+        return preg_match($this->regex,$token->getText()) > 0;
     }
 }
 
