@@ -1,10 +1,10 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher\Token;
-use Zeroem\CodeParser\Matcher\MatcherInterface;
+namespace Zeroem\CodeParser\TokenMatcher\Token;
+use Zeroem\CodeParser\TokenMatcher\TokenMatcherInterface;
 user Zeroem\CodeParser\Token;
 
-class RegexMatcher implements MatcherInterface
+class RegexTokenMatcher implements TokenMatcherInterface
 {
     private $regex;
 

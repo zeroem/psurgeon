@@ -1,10 +1,10 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher\Logic;
+namespace Zeroem\CodeParser\TokenMatcher\Logic;
 
 use Zeroem\CodeParser\Token;
 
-class OrMatcher extends AbstractBooleanMatcher
+class OrTokenMatcher extends AbstractBooleanTokenMatcher
 {
     public function match(Token $token) {
         foreach($this->matchers as $matcher) {

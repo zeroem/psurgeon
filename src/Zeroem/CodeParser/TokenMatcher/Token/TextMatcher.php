@@ -1,11 +1,11 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher\Token;
-use Zeroem\CodeParser\Matcher\MatcherInterface;
+namespace Zeroem\CodeParser\TokenMatcher\Token;
+use Zeroem\CodeParser\TokenMatcher\TokenMatcherInterface;
 use Zeroem\CodeParser\Token;
 
 
-class TextMatcher implements MatcherInterface
+class TextTokenMatcher implements TokenMatcherInterface
 {
     private $text;
     private $ignoreCase = false;

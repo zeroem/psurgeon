@@ -1,9 +1,9 @@
 <?php
 
-namespace Zeroem\CodeParser\Matcher\Logic;
+namespace Zeroem\CodeParser\TokenMatcher\Logic;
 use Zeroem\CodeParser\Token;
 
-class XorMatcher extends AbstractBooleanMatcher
+class XorTokenMatcher extends AbstractBooleanTokenMatcher
 {
     private $found = false;
     
