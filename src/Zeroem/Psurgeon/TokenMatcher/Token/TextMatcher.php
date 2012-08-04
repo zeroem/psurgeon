@@ -1,8 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\TokenMatcher\Token;
-use Zeroem\CodeParser\TokenMatcher\TokenMatcherInterface;
-use Zeroem\CodeParser\Token;
+namespace Zeroem\Psurgeon\TokenMatcher\Token;
+use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
+use Zeroem\Psurgeon\Token;
 
 
 class TextTokenMatcher implements TokenMatcherInterface

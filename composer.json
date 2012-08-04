@@ -1,5 +1,5 @@
 {
-    "name": "darrellh/code-parser",
+    "name": "zeroem/psurgeon",
     "description": "Tools for programmatically editing php files",
     "authors": [
         {
@@ -13,8 +13,8 @@
     },
     "autoload": {
         "psr-0": { 
-            "Zeroem\\CodeParser": "src",
-            "Zeroem\\CodeParser\\Test": "test"
+            "Zeroem\\Psurgeon": "src",
+            "Zeroem\\Psurgeon\\Test": "test"
         }
     }
 }

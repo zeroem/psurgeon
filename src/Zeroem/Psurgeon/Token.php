@@ -1,6 +1,6 @@
 <?php
 
-namespace Zeroem\CodeParser;
+namespace Zeroem\Psurgeon;
 
 class Token
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Zeroem\CodeParser\TokenMatcher\Logic;
+namespace Zeroem\Psurgeon\TokenMatcher\Logic;
 
-use Zeroem\CodeParser\TokenMatcher\TokenMatcherInterface;
-use Zeroem\CodeParser\Token;
+use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
+use Zeroem\Psurgeon\Token;
 
 
 class NegateTokenMatcher implements TokenMatcherInterface 

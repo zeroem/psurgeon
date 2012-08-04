@@ -1,8 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\TokenMatcher\Logic;
+namespace Zeroem\Psurgeon\TokenMatcher\Logic;
 
-use Zeroem\CodeParser\Token;
+use Zeroem\Psurgeon\Token;
 
 class AndTokenMatcher extends BooleanTokenMatcher
 {

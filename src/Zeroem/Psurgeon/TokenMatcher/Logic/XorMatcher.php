@@ -1,7 +1,7 @@
 <?php
 
-namespace Zeroem\CodeParser\TokenMatcher\Logic;
-use Zeroem\CodeParser\Token;
+namespace Zeroem\Psurgeon\TokenMatcher\Logic;
+use Zeroem\Psurgeon\Token;
 
 class XorTokenMatcher extends AbstractBooleanTokenMatcher
 {

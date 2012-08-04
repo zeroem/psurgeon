@@ -1,6 +1,6 @@
 <?php
 
-namespace Zeroem\CodeParser\TokenMatcher;
+namespace Zeroem\Psurgeon\TokenMatcher;
 
 interface TokenMatcherInterface
 {

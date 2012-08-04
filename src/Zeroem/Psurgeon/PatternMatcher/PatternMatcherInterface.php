@@ -1,8 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\PatternMatcher;
+namespace Zeroem\Psurgeon\PatternMatcher;
 
-use Zeroem\CodeParser\Token;
+use Zeroem\Psurgeon\Token;
 
 interface PatternMatcherInterface
 {

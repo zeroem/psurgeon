@@ -1,8 +1,8 @@
 <?php
 
-namespace Zeroem\CodeParser\Test;
+namespace Zeroem\Psurgeon\Test;
 
-use Zeroem\CodeParser\Tokenizer;
+use Zeroem\Psurgeon\Tokenizer;
 
 
 class TokenizerTest extends \PHPUnit_Framework_TestCase
