@@ -1,4 +1,4 @@
-drop table psurgeon_index;
+--drop table psurgeon_index;
 
 create table psurgeon_index (
   entity text not null,
@@ -7,6 +7,6 @@ create table psurgeon_index (
   line_number integer
 );
 
-drop index psurgeon_index_entity;
+--drop index psurgeon_index_entity;
 
 create index psurgeon_index_entity on psurgeon_index (entity, is_definition);
