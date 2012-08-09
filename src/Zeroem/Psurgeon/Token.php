@@ -4,41 +4,57 @@ namespace Zeroem\Psurgeon;
 
 class Token
 {
-    private $type;
-    private $text;
-    private $line;
-    private $name;
+  /**
+   * T_* token constant
+   * @var integer
+   */
+  private $type;
 
-    public function __construct($text, $type=null, $line=null) {
-        $this->text = $text;
-        $this->type = $type;
-        $this->line = $line;
+  /**
+   * @var string
+   */
+  private $text;
 
-        if(isset($this->type)) {
-            $this->name = token_name($this->type);
-        } else {
-            $this->name = '_SINGLE_CHARACTER_';
-        }
+  /**
+   * @var integer
+   */
+  private $line;
+  /**
+   * @var string
+   */
+  private $name;
+
+
+  public function __construct($text, $type=null, $line=null) {
+    $this->text = $text;
+    $this->type = $type;
+    $this->line = $line;
+
+    if(isset($this->type)) {
+      $this->name = token_name($this->type);
+    } else {
+      $this->name = '_SINGLE_CHARACTER_';
     }
+  }
 
-    public function getType() {
-        return $this->type;
-    }
+  public function getType() {
+    return $this->type;
+  }
 
-    public function getText() {
-        return $this->text;
-    }
+  public function getText() {
+    return $this->text;
+  }
 
-    public function getLine() {
-        return $this->line;
-    }
+  public function getLine() {
+    return $this->line;
+  }
 
-    public function getName() {
-        return $this->name;
-    }
+  public function getName() {
+    return $this->name;
+  }
 
-    public function __toString() {
-        return $this->text;
-    }
+  public function __toString() {
+    return $this->text;
+  }
 }
 

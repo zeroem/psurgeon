@@ -6,8 +6,7 @@ class Tokenizer
 {
     public function tokenize($str) {
         $rawTokens = token_get_all($str);
-        $objectTokens = array();
-
+        $chain = new TokenChain();
         $line = 0;
 
         foreach($rawTokens as $rawToken) {
@@ -18,10 +17,10 @@ class Tokenizer
                 $token = new Token($rawToken, null, $line); 
             }
 
-            $objectTokens[] = $token;
+            $chain->appendToken($token);
         }
 
-        return $objectTokens;
+        return $chain;
     }
 }
 
