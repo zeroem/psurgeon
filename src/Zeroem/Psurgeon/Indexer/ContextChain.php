@@ -15,25 +15,26 @@ class ContextChain
   }
 
   public function getNamespace() {
-    return $this->find('namespace');
+    return $this->find('Namespace');
   }
 
   public function getFile() {
-    return $this->find('file');
+    return $this->find('File');
   }
 
   public function getClass() {
-    return $this->find('class');
+    return $this->find('Class');
   }
 
   public function getFunction() {
-    return $this->find('function');
+    return $this->find('Function');
   }
 
   private function find($element) {
+    $class = "Zeroem\\Psurgeon\\Indexer\\Entity\\" . $element . "Indexer";
     foreach($this->stack as $context) {
-      if(isset($context->$element)) {
-        return $context->$element;
+      if($context instanceof $class) {
+        return $context;
       }
     }
 
