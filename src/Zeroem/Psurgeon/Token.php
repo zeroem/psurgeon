@@ -25,7 +25,7 @@ class Token
   private $name;
 
 
-  public function __construct($text, $type=null, $line=null) {
+  public function __construct($text=null, $type=null, $line=null) {
     $this->text = $text;
     $this->type = $type;
     $this->line = $line;
