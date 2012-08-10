@@ -34,3 +34,4 @@ interface IndexerInterface
    */
   public function isContextual();
 }
+
