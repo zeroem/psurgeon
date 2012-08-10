@@ -15,15 +15,22 @@ interface IndexerInterface
    *
    * @return boolean
    */
-  function canIndex(ContextChain $context, TokenNode $node);
+  public function canIndex(ContextChain $context, TokenNode $node);
 
   /**
-   * Generate an Index Entity based on the give node and context
+   * Generate one or more Index Entities based on the give node and context
    *
    * @param ContextChain $context the current context
    * @param TokenNode $node the node to index
    *
-   * @return Index
+   * @return Zeroem\Psurgeon\Indexer\Entity\*
    */
-  function index(ContextChain $context, TokenNode $node);
+  public function index(ContextChain $context, TokenNode $node);
+
+  /**
+   * Whether or not to push the Indexer Entity onto the ContextChain
+   * 
+   * @return boolean
+   */
+  public function isContextual();
 }
