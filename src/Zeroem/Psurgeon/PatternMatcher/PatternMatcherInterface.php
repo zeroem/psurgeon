@@ -13,13 +13,13 @@ interface PatternMatcherInterface
      *
      * @return boolean whether or not the token fits in the patter
      */
-    function nextToken(Token $token);
+    public function nextToken(Token $token);
 
     /**
      * is the pattern complete
      *
      * @return boolean
      */
-    function complete();
+    public function complete();
 }
 

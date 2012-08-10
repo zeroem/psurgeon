@@ -4,6 +4,6 @@ namespace Zeroem\Psurgeon\TokenMatcher;
 
 interface TokenMatcherInterface
 {
-    function match($mixed);
+    public function match($mixed);
 }
 
