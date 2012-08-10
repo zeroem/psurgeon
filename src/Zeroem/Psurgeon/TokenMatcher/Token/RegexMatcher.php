@@ -2,7 +2,7 @@
 
 namespace Zeroem\Psurgeon\TokenMatcher\Token;
 use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
-user Zeroem\Psurgeon\Token;
+use Zeroem\Psurgeon\Token;
 
 class RegexTokenMatcher implements TokenMatcherInterface
 {
