@@ -2,17 +2,19 @@
 
 namespace Zeroem\Psurgeon\Indexer\Entity;
 
+use Zeroem\Psurgeon\Indexer\IdGenerator;
+
 class FileIndex
 {
   public $id;
-  public $file_path;
+  public $file;
   public $content_signature;
-  public $index_date;
+  public $index_time;
 
-  public function __construct($file_path,$content_signature) {
-    $this->file_path = $file_path;
-    $this->id = md5($file_path);
+  public function __construct($file,$content_signature) {
+    $this->file = $file;
     $this->content_signature = $content_signature;
-    $this->index_date = time();
+    $this->index_time = time();
+    $this->id = IdGenerator::generate($this);
   }
 }

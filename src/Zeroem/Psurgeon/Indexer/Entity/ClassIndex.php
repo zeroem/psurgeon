@@ -2,6 +2,8 @@
 
 namespace Zeroem\Psurgeon\Indexer\Entity;
 
+use Zeroem\Psurgeon\Indexer\IdGenerator;
+
 class ClassIndex
 {
   public $id;
@@ -10,9 +12,10 @@ class ClassIndex
   public $class_name;
 
   public function __construct($class_name,$file_id, $namespace_id) {
-    $this->id = md5($namespace_id.$class_name);
     $this->class_name = $class_name;
     $this->file_id = $file_id;
     $this->namespace_id = $namespace_id;
+
+    $this->id = IdGenerator::generate($this);
   }
 }
