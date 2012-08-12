@@ -2,6 +2,8 @@
 
 namespace Zeroem\Psurgeon;
 
+use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
+
 class TokenChain implements \Countable
 {
   private $head = null;
@@ -33,7 +35,11 @@ class TokenChain implements \Countable
     return $this->count;
   }
 
-  public static function find(TokenNode $start, TokenMatcher $target, TokenMatcher $terminal) {
+  public static function find(
+    TokenNode $start,
+    TokenMatcherInterface $target,
+    TokenMatcherInterface $terminal
+  ) {
     $pointer = $start;
 
     do {
