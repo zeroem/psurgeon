@@ -6,6 +6,7 @@ use Zeroem\Psurgeon\Indexer\Entity\FileIndex;
 use Zeroem\Psurgeon\Indexer\AbstractTokenMatcherContextualIndexer;
 use Zeroem\Psurgeon\TokenMatcher\Token\TokenMatcher;
 use Zeroem\Psurgeon\TokenNode;
+use Zeroem\Psurgeon\TokenChain;
 
 class FunctionIndexer extends AbstractTokenMatcherContextualIndexer
 {
@@ -29,23 +30,12 @@ class FunctionIndexer extends AbstractTokenMatcherContextualIndexer
     $paren = new TextMatcher('(');
     $string = new TokenMatcher(T_STRING);
 
-    $pointer = $node;
-    while($pointer->hasNext()) {
-      $pointer = $pointer->getNext();
-      $token = $pointer->getToken();
+    $nameNode = TokenChain::find($node, $string, $paren);
 
-      if($string->match($token)) {
-        $name = $token->getText();
-        break;
-      } else if($paren->match($token)) {
-        break;
-      }  
+    if(false !== $nameNode) {
+      return $nameNode->getToken()->getText();
+    } else {
+      return '__ANONYMOUS__';
     }
-
-    if(!isset($name)) {
-      $name = '__ANONYMOUS__';
-    }
-
-    return $name;
   }
 }
