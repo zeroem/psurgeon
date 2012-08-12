@@ -32,5 +32,20 @@ class TokenChain implements \Countable
   public function count() {
     return $this->count;
   }
+
+  public static function find(TokenNode $start, TokenMatcher $target, TokenMatcher $terminal) {
+    $pointer = $start;
+
+    do {
+      $token = $pointer->getToken();
+      if($target->match($token)) {
+        return $pointer;
+      } else if(isset($terminal) && $terminal->match($token)) {
+        return false;
+      }
+    } while($pointer = $pointer->getNext());
+
+    return false;
+  }
 }
 
