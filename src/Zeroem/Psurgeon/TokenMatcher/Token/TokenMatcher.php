@@ -9,11 +9,11 @@ class TokenMatcher implements TokenMatcherInterface
     private $token;
 
     public function __construct($token) {
-        $this->token = token;
+        $this->token = $token;
     }
 
     public function match(Token $token) {
-        return $token->getType() == $this->token;
+        return $token->getType() === $this->token;
     }
 
     public function getToken() {
