@@ -31,6 +31,10 @@ class TokenChain implements \Countable
     return $this->head;
   }
 
+  public function getTail() {
+    return $this->tail;
+  }
+
   public function count() {
     return $this->count;
   }
@@ -38,7 +42,7 @@ class TokenChain implements \Countable
   public static function find(
     TokenNode $start,
     TokenMatcherInterface $target,
-    TokenMatcherInterface $terminal
+    TokenMatcherInterface $terminal=null
   ) {
     $pointer = $start;
 
