@@ -5,7 +5,7 @@ use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
 use Zeroem\Psurgeon\Token;
 
 
-class TextTokenMatcher implements TokenMatcherInterface
+class TextMatcher implements TokenMatcherInterface
 {
     private $text;
     private $ignoreCase = false;
@@ -20,7 +20,7 @@ class TextTokenMatcher implements TokenMatcherInterface
         }
     }
 
-   private function match(Token $token) {
+    public function match(Token $token) {
         if($this->ignoreCase) {
             $str = strtolower($token->getText());
         } else {
