@@ -4,7 +4,7 @@ namespace Zeroem\Psurgeon\TokenMatcher\Token;
 use Zeroem\Psurgeon\TokenMatcher\TokenMatcherInterface;
 use Zeroem\Psurgeon\Token;
 
-class TokenTokenMatcher implements TokenMatcherInterface
+class TokenMatcher implements TokenMatcherInterface
 {
     private $token;
 
