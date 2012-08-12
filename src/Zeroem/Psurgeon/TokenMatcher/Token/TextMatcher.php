@@ -29,5 +29,9 @@ class TextMatcher implements TokenMatcherInterface
 
         return $str === $this->text;
     }
+
+    public function getText() {
+      return $this->text;
+    }
 }
 
