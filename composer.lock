@@ -1,22 +1,40 @@
 {
-    "hash": "8e7507ace09b9ebc098c8d86d5ce4298",
+    "hash": "16c397b262c6f30d8b82ca73bf75cdf9",
     "packages": [
         {
-            "package": "symfony/console",
-            "version": "dev-master",
-            "source-reference": "7c328a9752ac035fe38dfae5425cf66b905c5394",
-            "commit-date": "1343512949"
+            "package": "doctrine/common",
+            "version": "2.3.x-dev",
+            "source-reference": "2ec4bc6db13db6a0976a16b71058083c55cbcdbd",
+            "commit-date": "1343847076"
         },
         {
-            "package": "symfony/finder",
+            "package": "doctrine/dbal",
+            "version": "2.3.x-dev",
+            "source-reference": "86b10e7eda2eed1d9a07a580a40e14cea8e1733a",
+            "commit-date": "1343559046"
+        },
+        {
+            "package": "doctrine/orm",
+            "version": "2.3.x-dev",
+            "source-reference": "17862d9a2a38bf801e564d09a26eea8503621ae0",
+            "commit-date": "1343850025"
+        },
+        {
+            "package": "symfony/console",
             "version": "dev-master",
             "alias-pretty-version": "2.1.x-dev",
             "alias-version": "2.1.9999999.9999999-dev"
         },
         {
+            "package": "symfony/console",
+            "version": "dev-master",
+            "source-reference": "3b66f1056f5ac37146d3b755964e8a43a205f2f5",
+            "commit-date": "1344349441"
+        },
+        {
             "package": "symfony/finder",
             "version": "dev-master",
-            "source-reference": "7fe9695cb1dae09df7f545aabed8fa4b0026108b",
+            "source-reference": "v2.1.0-RC1",
             "commit-date": "1343512949"
         }
     ],
